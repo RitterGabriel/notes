@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+    </style>
+    <title>Notes</title>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Notes</h1>
+    </div>
+
+    <div class="new-note-area">
+        <button id="openModal" class="new-note-btn">
+            <span class="material-icons">add</span>
+            New Note
+        </button>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="content-background">
+            <div class="notes">
+                <!-- notas -->
+            </div>
+        </div>
+    </div>
+
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <h2>Create New Note</h2>
+            <input type="text" id="noteTitle" placeholder="Title">
+            <textarea id="noteDescription" placeholder="Description"></textarea>
+            <div class="modal-buttons">
+                <button id="saveNote">Save</button>
+                <button id="closeModal">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
