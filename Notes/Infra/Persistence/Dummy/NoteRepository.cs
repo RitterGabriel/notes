@@ -22,13 +22,32 @@ public class NoteRepository : INoteRepository
         NotesSpaces.Add(noteSpace);
     }
 
-    public Task RemoveNote(int noteId)
+    public async Task RemoveNote(string noteSlug)
     {
-        throw new NotImplementedException();
+        foreach (var noteSpace in NotesSpaces)
+        {
+            noteSpace.Notes = noteSpace.Notes.Where(note => note.Slug != noteSlug).ToList();
+        }
     }
 
     public async Task<NoteSpace?> GetNoteSpaceBySlug(string slug)
     {
         return NotesSpaces.FirstOrDefault(noteSpace => noteSpace.Slug == slug);
+    }
+
+    public async Task ReplaceNote(string noteSlug, Note note)
+    {
+        foreach (var noteSpace in NotesSpaces)
+        {
+            var currentNote = noteSpace.Notes.FirstOrDefault(n => n.Slug == noteSlug);
+            if (currentNote is null)
+            {
+                continue;
+            }
+
+            currentNote.Title = note.Title;
+            currentNote.Description = note.Description;
+            break;
+        }
     }
 }

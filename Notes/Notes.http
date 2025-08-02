@@ -38,3 +38,18 @@ GET {{Notes_HostAddress}}/api/v1/notespaces/my-notespace
 Accept: application/json
 
 ###
+
+PUT {{Notes_HostAddress}}/api/v1/notes/b7a34fb5-4c74-4594-8911-00227f1d1d5b
+Content-Type: application/json
+
+{
+  "title": "my note -1",
+  "description": "cats > dogs"
+}
+
+###
+
+DELETE {{Notes_HostAddress}}/api/v1/notes/b7a34fb5-4c74-4594-8911-00227f1d1d5b
+Accept: *
+
+###
