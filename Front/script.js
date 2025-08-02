@@ -4,7 +4,7 @@ const modal = document.getElementById("noteModal");
 const saveNote = document.getElementById("saveNote");
 const notesContainer = document.querySelector(".notes");
 
-let editingNote = null; 
+let editingNote = null;
 
 openModal.addEventListener("click", () => {
     editingNote = null;
@@ -27,12 +27,10 @@ saveNote.addEventListener("click", () => {
     }
 
     if (editingNote) {
-        
         editingNote.querySelector(".note-header").textContent = title;
         editingNote.querySelector(".note-body").textContent = description;
         editingNote = null;
     } else {
-        
         const note = document.createElement("div");
         note.classList.add("note-item");
         note.innerHTML = `
@@ -44,12 +42,10 @@ saveNote.addEventListener("click", () => {
             </div>
         `;
 
-        
         note.querySelector(".delete-btn").addEventListener("click", () => {
             note.remove();
         });
 
-        
         note.querySelector(".edit-btn").addEventListener("click", () => {
             editingNote = note;
             document.getElementById("noteTitle").value = note.querySelector(".note-header").textContent;
