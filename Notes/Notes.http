@@ -3,3 +3,38 @@
 GET {{Notes_HostAddress}}/ping
 
 ###
+
+
+POST {{Notes_HostAddress}}/api/v1/notespaces
+Content-Type: application/json
+
+{
+  "slug": "my-notespace"
+}
+
+###
+
+POST {{Notes_HostAddress}}/api/v1/notespaces/my-notespace/notes
+Content-Type: application/json
+
+{
+  "title": "my note",
+  "description": "shall I compare the to a summer day?"
+}
+
+###
+
+POST {{Notes_HostAddress}}/api/v1/notespaces/my-notespace/notes
+Content-Type: application/json
+
+{
+  "title": "my note 2",
+  "description": "There's a blue bird in my heart and it want to get out"
+}
+
+###
+
+GET {{Notes_HostAddress}}/api/v1/notespaces/my-notespace
+Accept: application/json
+
+###

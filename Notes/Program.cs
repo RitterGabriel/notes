@@ -1,7 +1,10 @@
+using Notes.Infra.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
+builder.Services.AddRepositories();
 
 var app = builder.Build();
 
