@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2025-08-03",
+    "temperatureC": -11,
+    "summary": "Hot",
+    "temperatureF": 13
+  },
+  {
+    "date": "2025-08-04",
+    "temperatureC": -5,
+    "summary": "Chilly",
+    "temperatureF": 24
+  },
+  {
+    "date": "2025-08-05",
+    "temperatureC": -15,
+    "summary": "Bracing",
+    "temperatureF": 6
+  },
+  {
+    "date": "2025-08-06",
+    "temperatureC": -11,
+    "summary": "Cool",
+    "temperatureF": 13
+  },
+  {
+    "date": "2025-08-07",
+    "temperatureC": -19,
+    "summary": "Cool",
+    "temperatureF": -2
+  }
+]

@@ -1,6 +1,5 @@
 @Notes_HostAddress = http://localhost:5052
 
-GET {{Notes_HostAddress}}/weatherforecast/
-Accept: application/json
+GET {{Notes_HostAddress}}/ping
 
 ###
